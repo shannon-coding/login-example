@@ -1,32 +1,16 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Grid } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <header>
+    <div>
+      <Grid item xs={12}>
+        <Typography component="h1" variant="h2">
           {siteTitle}
-        </Link>
-      </h1>
+        </Typography>
+      </Grid>
     </div>
   </header>
 )
